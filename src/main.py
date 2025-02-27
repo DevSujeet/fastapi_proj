@@ -3,7 +3,7 @@ import uvicorn
 from src.config.configs import _db_settings, CacheSettings
 from typing import Dict
 import os
-from src.routes import auth_saml, auth_oauth,intro, test, user, record, location, project, analytics #, userActivity
+from src.routes import auth_oauth,intro, test, user, record, location, project, analytics #, userActivity, auth_saml
 from src.middleware.middleware import add_process_time, source_exception_handler
 from src.middleware.redis_middleware import RedisCacheMiddleware
 from src.exceptions.exception import SourceException
@@ -47,7 +47,7 @@ def create_app(lifespan:lifespan) -> FastAPI:
 def get_fastapi_routers():
     return [
         auth_oauth.router,
-        auth_saml.router,
+        # auth_saml.router,
         analytics.router,
         intro.router,
         user.router,
