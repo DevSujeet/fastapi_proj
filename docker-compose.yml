@@ -23,7 +23,7 @@ services:
     depends_on:
       - db
     environment:
-      DATABASE_URL: postgresql://postgres:postgres@db:5432/postgres
+      DATABASE_URL: postgresql://postgres:postgres@db:5432/vodafone
 
 volumes:
   postgres_data:

@@ -2,7 +2,7 @@
 import uuid
 from sqlalchemy import Column, TIMESTAMP, ForeignKey, func, String
 from sqlalchemy.dialects.postgresql import JSONB
-from src.db import Base
+from db import Base
 
 class UserActivityData(Base):
     __tablename__ = 'user_activity'
